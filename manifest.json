@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "twitchDOCtv",
+  "description": "This extension enhances the homepage of twitch.tv by adding Violence, Speed, and Momentum to the logo.",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    "doctv.png",
+    "carousel.png" ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.twitch.tv/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ],
+      "matches": [
+        "https://www.twitch.tv/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
